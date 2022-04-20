@@ -3,6 +3,7 @@ from django.db import models
 # AbstractUser => Permite agregar nuevas columnas de las que ya estaban creadas incialmente
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from users.authManager import UserManager
+from django.utils import timezone
 
 # Create your models here.
 
@@ -10,8 +11,9 @@ from users.authManager import UserManager
 class User(AbstractBaseUser, PermissionsMixin):
     id = models.AutoField(primary_key=True)
     username = models.CharField(max_length=45, null=False)
-    first_name = models.CharField(max_length=45)
-    last_name = models.CharField(max_length=45)
+    first_name = models.CharField(max_length=45, null=False)
+    last_name = models.CharField(max_length=45, null=False)
+    date_joined = models.DateTimeField(default=timezone.now)
 
     email = models.EmailField(unique=True, null=False)
     password = models.TextField(null=False)
@@ -31,7 +33,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
 
-    REQUIRED_FIELDS = ['name', 'rol']
+    REQUIRED_FIELDS = ['name', 'username', 'rol']
 
     class Meta:
         db_table = 'users'
