@@ -29,10 +29,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2k+a131-40q5ute2!4+fcy0gy4yasb26(5$u_l=5)-b81+8mb$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 #ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '127.0.0.1:8000']
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -64,7 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware'  # añadida
 ]
 
 ROOT_URLCONF = 'restaurant.urls'
@@ -171,7 +172,6 @@ STATIC_URL = '/static/'
 
 os.makedirs(STATIC_TMP, exist_ok=True)
 os.makedirs(STATIC_ROOT, exist_ok=True)
-
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
