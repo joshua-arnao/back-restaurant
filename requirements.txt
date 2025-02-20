@@ -36,7 +36,7 @@ Pillow==9.1.0
 psycopg2==2.9.3
 pycodestyle==2.8.0
 pycparser==2.21
-PyJWT==3.0.0
+PyJWT
 pyparsing==3.0.7
 python-dotenv==0.20.0
 pytz==2022.1
