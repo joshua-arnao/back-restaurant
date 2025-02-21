@@ -41,8 +41,6 @@ pyparsing==3.0.7
 python-dotenv==0.20.0
 pytz==2022.1
 requests==2.27.1
-ruamel.yaml==0.17.21
-ruamel.yaml.clib==0.2.6
 six==1.16.0
 SQLAlchemy==1.4.32
 sqlparse==0.4.2
@@ -51,5 +49,5 @@ uritemplate==4.1.1
 urllib3==1.26.9
 Werkzeug==2.0.3
 whitenoise==6.1.0
-ruamel.yaml==0.17.21
-ruamel.yaml.clib==0.2.7
+ruamel.yaml
+ruamel.yaml.clib
