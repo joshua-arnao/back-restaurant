@@ -51,5 +51,5 @@ uritemplate==4.1.1
 urllib3==1.26.9
 Werkzeug==2.0.3
 whitenoise==6.1.0
-ruamel.yaml
-ruamel.yaml.clib
+ruamel.yaml==0.17.21
+ruamel.yaml.clib==0.2.7
