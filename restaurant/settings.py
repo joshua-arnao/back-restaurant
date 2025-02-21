@@ -157,7 +157,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # USERS
 AUTH_USER_MODEL = 'users.User'
 
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "https://gestor-restaurant.vercel.app",
     "http://gestor-restaurant.vercel.app",
